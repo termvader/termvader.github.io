@@ -21,13 +21,15 @@ $(document).ready(function(e) {
 		{
 			if(turn == 0)
 			{
-				this.innerHTML = "<img src=\"o.png\" />";
+				$(this).children("img").attr("src", "o.png")
+				//this.innerHTML = "<img src=\"o.png\" />";
 				$(this).addClass("blue");
 				isOccupied[i][j] = 1;
 			}
 			else
 			{
-				this.innerHTML = "<img src=\"x.png\" />";
+				$(this).children("img").attr("src", "x.png")
+				//this.innerHTML = "<img src=\"x.png\" />";
 				$(this).addClass("red");
 				isOccupied[i][j] = 2;
 			}
