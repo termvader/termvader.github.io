@@ -33,3 +33,9 @@ table tr td:last-child {
 .blue {
 	background-color:#69aec7;
 }
+#preload1 {
+  background: url(o.png) no-repeat -9999px -9999px;
+}
+#preload2 {
+  background: url(x.png) no-repeat -9999px -9999px;
+}
