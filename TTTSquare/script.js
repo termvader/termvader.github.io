@@ -21,15 +21,13 @@ $(document).ready(function(e) {
 		{
 			if(turn == 0)
 			{
-				$(this).children("img").attr("src", "o.png")
-				//this.innerHTML = "<img src=\"o.png\" />";
+				this.innerHTML = "O";
 				$(this).addClass("blue");
 				isOccupied[i][j] = 1;
 			}
 			else
 			{
-				$(this).children("img").attr("src", "x.png")
-				//this.innerHTML = "<img src=\"x.png\" />";
+				this.innerHTML = "X";
 				$(this).addClass("red");
 				isOccupied[i][j] = 2;
 			}
@@ -76,8 +74,6 @@ $(document).ready(function(e) {
 		}
 	});
 });
-//69aec7 blue
-//c96a6a red
 function whoWon(arr) {
 	if((arr[0] == arr[1]) && (arr[0] == arr[2]) && arr[0])
 		return arr[0];

@@ -33,6 +33,14 @@ table tr td:last-child {
 .blue {
 	background-color:#69aec7;
 }
+.cell {
+  width: 38px;
+  height: 38px;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Arial;
+  font-size: 25pt;
+}
 #preload1 {
   background: url(o.png) no-repeat -9999px -9999px;
 }
