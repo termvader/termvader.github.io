@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Markdown using Incremental DOM</title>
+	<style>
+		#input, #output {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			width: 50%;
+			box-sizing: border-box;
+			padding: 10px;
+		}
+		#input {
+			left: 0;
+		}
+		#output {
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<textarea id="input"># Incremental DOM using Markdown-it
+
+- This is an unordered list.
+
+1. This is an ordered list.
+
+</textarea>
+	<div id="output"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/incrementaldom/0.2.0/incremental-dom.js"></script>
+	<script src="https://cdn.jsdelivr.net/markdown-it/5.1.0/markdown-it.min.js"></script>
+	<script src="./main.js"></script>
+</body>
+</html>
