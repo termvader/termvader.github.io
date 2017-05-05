@@ -11,9 +11,17 @@
       'react-dom': 'https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.min'
     }
   })
+  // This is how to catch requirejs loading, script, nodefine etc. errors.
+  require.onError = function (err) {
+    // Log it to Sentry or Errorception or Rollbar or TrackJS or New Relic Browser etc.
+    console.error(err)
+  }
   require(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'], function ($) {
     require(['react', 'react-dom'], function (React, ReactDOM) {
-      
+      // I'm actually loading react scripts which stops the error from occuring.
+      // But if you use requirejs and don't load react or have it named differently
+      // And you are tracking browser/client errors, this will flood your logger
+      // Overflowing your quota.
     })
   })
 
